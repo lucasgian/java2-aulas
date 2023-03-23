@@ -33,7 +33,7 @@ public class CadastroAlunoServlet extends HttpServlet {
 		String idade = request.getParameter("idade");
 
 		Aluno aluno = new Aluno(nome, Integer.parseInt(idade));
-		request.setAttribute("nome", aluno.nome);
+		request.setAttribute("nome", aluno);
 		RequestDispatcher view = request.getRequestDispatcher("novoAluno.jsp");
 		view.forward(request, response);
 	}

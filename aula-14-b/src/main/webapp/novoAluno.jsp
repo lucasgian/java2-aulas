@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"  isELIgnored="false"%>
-    
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +7,7 @@
 <title>Novo Aluno</title>
 </head>
 <body>
-<h1>Deu certo</h1>
-${aluno.nome }
-
+<h1>Novo aluno</h1>
+${nome}
 </body>
 </html>
