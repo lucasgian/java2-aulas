@@ -43,7 +43,7 @@ public class AlunoController {
 
 	@PutMapping
 	@Transactional
-	public void atualizar(@RequestBody DadosListagemAluno dados) {
+	public void atualizar(@RequestBody DadosCadastroAluno dados) {
 		try {
 			Optional<Aluno> alunoOptional = repository.findById(dados.id());
 			if (alunoOptional.isPresent()) {

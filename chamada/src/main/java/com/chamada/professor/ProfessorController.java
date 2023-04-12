@@ -5,7 +5,9 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,7 +35,13 @@ public class ProfessorController {
 		// Estamos salvando um novo professor e inserindo os dados pelo Construtor
 		repository.save(new Professor(dados));
 	}
-	
+
+	@DeleteMapping("{id}")
+	public void excluir(@PathVariable String id) {
+		System.out.println(id);
+		repository.deleteById(id);
+	}
+
 	@PutMapping
 	public void atualizar(@RequestBody @Valid DadosAtualizadoProfessor dados) {
 		try {
